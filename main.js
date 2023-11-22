@@ -13,6 +13,8 @@ import {
 } from "./components/gotas";
 import { creandoGotas } from "./components/all-tweens";
 import { tween3 } from "./components/tween3";
+import * as TWEEN from "@tweenjs/tween.js";
+// import { splitVendorChunkPlugin } from "vite";
 // IMPORTS ENDS
 
 // creando el body para anexar mis gotas al DOM
@@ -28,16 +30,18 @@ const gota3 = document.querySelectorAll(".estilo_de_gotas")[2]; // Get the eleme
 creandoGotas(gota1, gota2, gota3);
 
 // Setup the animation loop.
-function animate(time) {
-  // Keep requesting frames only if we still need to update.
-  if (tween1.update(time) && tween2.update(time) && tween3.update(time)) {
-    requestAnimationFrame(animate);
-  }
+let time;
+function animate() {
+  tween1.update(time);
+  tween2.update(time);
+  tween3.update(time);
+  requestAnimationFrame(animate);
 }
-
+// console.log(time);
 // START ANIMATION IN REQUEST ANIMATION
-requestAnimationFrame(animate);
+// requestAnimationFrame(animate);
 
 window.onload = () => {
-  containerOfButtons(body, playButton, pauseButton);
+  animate();
+  containerOfButtons(body, playButton, pauseButton, gota1, animate, time);
 };

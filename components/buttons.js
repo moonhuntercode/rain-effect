@@ -5,11 +5,18 @@ import { tween3 } from "./tween3";
 // añadiendo more elements to dom
 
 // crear contenedor para los botones
-export function containerOfButtons(body, playButton, pauseButton) {
+export function containerOfButtons(
+  body,
+  playButton,
+  pauseButton,
+  gota1,
+  animate,
+  time
+) {
   const container = document.createElement("div");
   container.className = "container_of_buttons";
-  const play = playButton();
-  const pause = pauseButton();
+  const play = playButton(animate, time);
+  const pause = pauseButton(gota1);
   console.log(play);
   container.append(play, pause);
   body.appendChild(container);
@@ -28,7 +35,7 @@ export function playButton() {
   });
   return button;
 }
-export function pauseButton() {
+export function pauseButton(gota1) {
   const button = document.createElement("button");
   button.className = "buttons bordes1";
   button.innerHTML = `&#9208`;
@@ -36,7 +43,10 @@ export function pauseButton() {
   button.title = "pause";
 
   button.addEventListener("click", () => {
+    console.log(gota1.style.transform);
     tween1.stop();
+
+    console.log((gota1.style.transform = "none"));
     tween2.stop();
     tween3.stop();
   });
