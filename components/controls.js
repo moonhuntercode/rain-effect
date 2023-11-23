@@ -1,4 +1,8 @@
-export const controls = {
-  velocidad: 550, //en miliseconds
-  rotation: 2,
+export let controls = {
+  velocidad: 1050, //en miliseconds
+  rotation: 0,
+  aumentar() {
+    this.velocidad /= 2;
+    console.log(`velocidad ${controls.velocidad}`);
+  },
 };

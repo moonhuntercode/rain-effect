@@ -24,24 +24,33 @@ body.append(creandoElemento1(), creandoElemento2(), creandoElemento3());
 
 // creando gotas
 const gota1 = document.querySelectorAll(".estilo_de_gotas")[0]; // Get the element we want to animate.
-console.log(gota1.style);
+
 const gota2 = document.querySelectorAll(".estilo_de_gotas")[1]; // Get the element we want to animate.
 const gota3 = document.querySelectorAll(".estilo_de_gotas")[2]; // Get the element we want to animate.
 creandoGotas(gota1, gota2, gota3);
 
 // Setup the animation loop.
 let time;
-function animate() {
+export function animate(time) {
+  TWEEN.update();
   tween1.update(time);
   tween2.update(time);
   tween3.update(time);
   requestAnimationFrame(animate);
 }
-// console.log(time);
+
 // START ANIMATION IN REQUEST ANIMATION
 // requestAnimationFrame(animate);
 
 window.onload = () => {
-  animate();
-  containerOfButtons(body, playButton, pauseButton, gota1, animate, time);
+  containerOfButtons(
+    body,
+    playButton,
+    pauseButton,
+    gota1,
+    gota2,
+    gota3,
+    animate,
+    time
+  );
 };

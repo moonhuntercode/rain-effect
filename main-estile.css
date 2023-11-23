@@ -42,8 +42,11 @@ body {
   text-align: center;
   overflow: hidden;
   position: relative;
-  
-  
+  background-image: url('/stars-anime-2.jpg');
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size: cover;
+
 }
 .bordes1 {
   border: solid white 3px;
@@ -56,8 +59,8 @@ body {
 }
 .estilo_de_gotas {
   position: absolute;
-  width: 2px;
-  height: 60px;
+  width: 1.5px;
+  height: 30px;
   background-color: white;
   filter: drop-shadow(30px -86px 2px rgb(178, 131, 241));
   z-index: 2;
