@@ -8,7 +8,7 @@ import { controls } from "./controls";
 }) */
 // function crearTwwen(coords){}
 export const tween3 = new TWEEN.Tween(coordenadas3, false) // Create a new tween2 that modifies 'coords'.
-  .to({ x: 250, y: 770 }, controls.velocidad) // Move to (300, 200) in 1 second.
+  .to({ x: 250, y: controls.destino_de_gotas.y }, controls.velocidad) // Move to (300, 200) in 1 second.
   .repeat(Infinity)
   .easing(TWEEN.Easing.Quadratic.InOut); // Use an easing function to make the animation smooth.
 // TWEEN 2 END

@@ -36,13 +36,14 @@ export function animate(time) {
   tween1.update(time);
   tween2.update(time);
   tween3.update(time);
-  requestAnimationFrame(animate);
+  time = requestAnimationFrame(animate);
 }
 
 // START ANIMATION IN REQUEST ANIMATION
 // requestAnimationFrame(animate);
 
 window.onload = () => {
+  animate();
   containerOfButtons(
     body,
     playButton,

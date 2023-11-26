@@ -34,19 +34,23 @@ html {
   flex-flow: column wrap;
   place-content: center;
   overflow: hidden;
+  
 }
 body {
-  width: 80%;
-  height: 80%;
+  width: 25em;
+  height: 40em;
   background-color: rgb(41, 1, 74);
   text-align: center;
   overflow: hidden;
   position: relative;
-  background-image: url('/stars-anime-2.jpg');
-  background-position: left;
-  background-repeat:no-repeat;
+  background-image: url('./stars-anime-copia.png');
+  background-position-x: -29.5em;
+  background-position-y: -.4em;
+  background-position:right;
   background-size: cover;
-
+  background-repeat:no-repeat;
+  
+  z-index: 1;
 }
 .bordes1 {
   border: solid white 3px;
@@ -58,11 +62,12 @@ body {
   box-sizing: border-box;
 }
 .estilo_de_gotas {
+  
   position: absolute;
-  width: 1.5px;
-  height: 30px;
+  width: 3px;
+  height: 40px;
   background-color: white;
-  filter: drop-shadow(30px -86px 2px rgb(178, 131, 241));
+  filter: drop-shadow(30px -96px 2px rgb(178, 131, 241));
   z-index: 2;
   /* transform: rotate(45deg); */
 }
@@ -79,6 +84,8 @@ body {
   font-weight: bold;
   color: white;
   font-size: xx-large;
+  position: relative;
+  z-index: 4;
 }
 .buttons:active {
   transform: scale(1.5);
@@ -89,6 +96,7 @@ body {
   text-align: center;
 }
 .container_of_buttons{
+  
   position: relative;
   z-index: 3;
   width: 100%;
@@ -100,5 +108,6 @@ body {
   place-items: end center;
   transform: scale(.6);
   transform: none;
-
+  
+ 
 }
