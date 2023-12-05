@@ -44,6 +44,8 @@ export function animate(time) {
 
 window.onload = () => {
   animate();
+  /* ocultando botones para luego
+  darle un mejor comportamiento
   containerOfButtons(
     body,
     playButton,
@@ -53,5 +55,5 @@ window.onload = () => {
     gota3,
     animate,
     time
-  );
+  ); */
 };
