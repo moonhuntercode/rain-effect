@@ -42,10 +42,11 @@ export function animate(time) {
 // START ANIMATION IN REQUEST ANIMATION
 // requestAnimationFrame(animate);
 
-window.onload = () => {
-  animate();
+window.addEventListener("DOMContentLoaded", () => {
+  // animate();
   /* ocultando botones para luego
-  darle un mejor comportamiento
+  darle un mejor comportamiento  */
+
   containerOfButtons(
     body,
     playButton,
@@ -55,5 +56,5 @@ window.onload = () => {
     gota3,
     animate,
     time
-  ); */
-};
+  );
+});
