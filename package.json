@@ -4,7 +4,7 @@
   "version": "0.2",
   "type": "module",
   "scripts": {
-    "lluvia:dev": "vite",
+    "lluvia:dev": "clear && vite",
     "build": "vite build",
     "preview": "vite preview"
   },

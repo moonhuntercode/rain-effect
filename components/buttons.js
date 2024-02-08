@@ -52,7 +52,7 @@ export function pauseButton(gota1, gota2, gota3, animate, time) {
   button.setAttribute("type", "button");
   button.title = "pause";
 
-  button.onclick = (time) => {
+  button.onclick = () => {
     controls.reduceVelocidad();
     console.log(controls.velocidad);
     /*  tween1.stopChainedTweens();

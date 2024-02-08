@@ -43,7 +43,7 @@ export function animate(time) {
 // requestAnimationFrame(animate);
 
 window.addEventListener("DOMContentLoaded", () => {
-  // animate();
+  animate();
   /* ocultando botones para luego
   darle un mejor comportamiento  */
 
