@@ -20,5 +20,9 @@ const handler = {
     console.log(`Property ${prop} has been read .`);
     return controls[prop];
   },
+  set(controls, prop, value) {
+    controls[prop] = value;
+    return true;
+  },
 };
 let proxyControl = new Proxy(controls, handler);
